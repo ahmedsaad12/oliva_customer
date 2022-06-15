@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.apps.oliva_customer.model.DepartmentModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image"
+            image2="@{model.image}"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+
+            android:background="@drawable/rounded_white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_corner_radius="20dp"
+            app:riv_mutate_background="true" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:background="@drawable/toolbar_shape"
+            android:gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingTop="7dp"
+            android:paddingRight="40dp"
+            android:paddingBottom="7dp"
+            android:text="@{model.name}"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>
